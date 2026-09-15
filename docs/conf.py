@@ -224,16 +224,11 @@ templates_path = [".sphinx/_templates"]
 # Redirects #
 #############
 
-# To set up redirects: https://documatt.gitlab.io/sphinx-reredirects/usage.html
-# For example: 'explanation/old-name.html': '../how-to/prettify.html',
+# Add redirects to the 'redirects.txt' file.
+# https://sphinxext-rediraffe.readthedocs.io/en/latest/
 
 # To set up redirects in the Read the Docs project dashboard:
 # https://docs.readthedocs.io/en/stable/guides/redirects.html
-
-# NOTE: If undefined, set to None, or empty,
-#       the sphinx_reredirects extension will be disabled.
-
-# redirects = {}  # Now using redirects.txt file instead
 
 
 ###########################
@@ -295,7 +290,7 @@ extensions = [
     "canonical_sphinx",
     "notfound.extension",
     "sphinx_design",
-    "sphinx_reredirects",
+    "sphinx_rerediraffe",
     "sphinx_tabs.tabs",
     "sphinxcontrib.jquery",
     "sphinxext.opengraph",
@@ -313,7 +308,6 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx_last_updated_by_git",
     "sphinx_sitemap",
-    "sphinxext.rediraffe",
     "sphinx_new_tab_link",
 ]
 
@@ -321,6 +315,7 @@ extensions = [
 
 exclude_patterns = [
     "doc-cheat-sheet*",
+    ".venv*",
 ]
 
 # Adds custom CSS files, located under 'html_static_path'
@@ -407,4 +402,6 @@ mermaid_output_format = 'raw'
 new_tab_link_show_external_link_icon = True
 
 rediraffe_redirects = "redirects.txt"
+# Strips '/index.html' from destination URLs when building with 'dirhtml'
+rediraffe_dir_only = True
 
