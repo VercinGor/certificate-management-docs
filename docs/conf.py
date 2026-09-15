@@ -323,12 +323,14 @@ exclude_patterns = [
 html_css_files = [
     "css/custom.css",
     "css/pdf.css",
+    "https://assets.ubuntu.com/v1/d86746ef-cookie_banner.css",
 ]
 
 # Adds custom JS files, located under 'html_static_path'
 
 html_js_files = [
     "js/overwrite_links.js",
+    "https://assets.ubuntu.com/v1/287a5e8f-bundle.js",
 ]
 
 # Feedback button at the top; enabled by default
