@@ -188,14 +188,11 @@ slug = 'juju/docs/certificate-management'
 
 html_baseurl = "https://canonical.com/juju/docs/certificate-management/"
 
-# URL scheme. Add version scheme element.
-# When configured with RTD variables, check for RTD environment so manual runs succeed:
+# URL scheme.
 
-if 'READTHEDOCS_VERSION' in os.environ:
-    version = os.environ["READTHEDOCS_VERSION"]
-    sitemap_url_scheme = '{version}{link}'
-else:
-    sitemap_url_scheme = 'MANUAL/{link}'
+sitemap_url_scheme = "{link}"
+
+sitemap_filename = "doc-sitemap.xml"
 
 # Include `lastmod` dates in the sitemap:
 
